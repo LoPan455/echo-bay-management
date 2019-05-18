@@ -1,8 +1,8 @@
 <H2>Properties:</H2>
 <H3>Liked Properties: <span>{{totalPropertyLikes}}</span></H3>
 <app-properties-thumbnail
+  #thumbnailComponent
   (liked)="handleLiked($event)"
-  [propertyHolding]="propertyHolding"
->
-
+  [propertyHolding]="propertyHolding">
 </app-properties-thumbnail>
+<button (click)="thumbnailComponent.logFoo()">Log Foo!</button>

@@ -18,6 +18,12 @@ export class PropertiesThumbnailComponent implements OnInit {
     this.liked.emit(this.propertyHolding);
   }
 
+  logFoo(){
+    console.log('Foo...');
+  }
+
+
+
   constructor() { }
 
   ngOnInit() {

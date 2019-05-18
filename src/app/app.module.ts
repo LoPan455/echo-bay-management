@@ -4,11 +4,13 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AngularMaterialModule } from "./angular-material/angular-material.module";
 import { UsersComponent } from './users/users.component';
 import { ClientsComponent } from './clients/clients.component';
 import { PropertiesComponent } from './properties/properties.component';
 import { OverviewComponent } from './overview/overview.component';
 import { PropertiesThumbnailComponent } from './properties/properties-thumbnail/properties-thumbnail.component';
+
 
 @NgModule({
   declarations: [
@@ -22,7 +24,8 @@ import { PropertiesThumbnailComponent } from './properties/properties-thumbnail/
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    AngularMaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
