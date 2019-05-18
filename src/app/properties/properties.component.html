@@ -1,5 +1,8 @@
-<div>
-  <h2>{{property_holding.name}}</h2>
-  <p>Tenant: <span>{{property_holding.tenant}}</span></p>
-  <p>Market Value: <span>{{property_holding.market_value}}</span></p>
-</div>
+<H2>Properties:</H2>
+<H3>Liked Properties: <span>{{totalPropertyLikes}}</span></H3>
+<app-properties-thumbnail
+  (liked)="handleLiked($event)"
+  [propertyHolding]="propertyHolding"
+>
+
+</app-properties-thumbnail>

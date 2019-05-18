@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, Output} from '@angular/core';
+import {Input} from "@angular/core/src/metadata/directives";
 
 @Component({
   selector: 'app-properties',
@@ -7,7 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PropertiesComponent implements OnInit {
 
-  property_holding = {
+  totalPropertyLikes:number = 0;
+
+  propertyHolding = {
+    "id": 1,
     "name": "Minneapolis Charter School",
     "address": {
       "street_address": "123 Johnson Blvd",
@@ -17,8 +21,15 @@ export class PropertiesComponent implements OnInit {
       "zipcode": "55408"
     },
     "market_value": 500000,
-    "tenant": "STEM Charters, LLC"
+    "tenant": "STEM Charters, LLC",
+    "likes": 0
   };
+
+  handleLiked(data) {
+    this.totalPropertyLikes++;
+    console.log('total property likes: ', this.totalPropertyLikes);
+    console.log('Proprty liked ',data);
+  }
 
   constructor() { }
 

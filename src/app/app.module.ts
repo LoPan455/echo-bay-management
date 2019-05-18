@@ -8,6 +8,7 @@ import { UsersComponent } from './users/users.component';
 import { ClientsComponent } from './clients/clients.component';
 import { PropertiesComponent } from './properties/properties.component';
 import { OverviewComponent } from './overview/overview.component';
+import { PropertiesThumbnailComponent } from './properties/properties-thumbnail/properties-thumbnail.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { OverviewComponent } from './overview/overview.component';
     UsersComponent,
     ClientsComponent,
     PropertiesComponent,
-    OverviewComponent
+    OverviewComponent,
+    PropertiesThumbnailComponent
   ],
   imports: [
     BrowserModule,
