@@ -9,7 +9,7 @@ import { PropertiesService } from '../shared/properties.service';
 export class PropertiesListComponent implements OnInit {
 
   totalPropertyLikes:number = 0;
-  propertyHolding:any;
+  propertyHoldings:any;
 
   handleLiked(data) {
     this.totalPropertyLikes++;
@@ -20,7 +20,7 @@ export class PropertiesListComponent implements OnInit {
   constructor(private propertiesService: PropertiesService) { }
 
   ngOnInit() {
-    this.propertyHolding = this.propertiesService.getProperties()
+    this.propertyHoldings = this.propertiesService.getProperties()
   }
 
 }

@@ -1,6 +1,6 @@
 <H2>Properties:</H2>
 <H3>Liked Properties: <span>{{totalPropertyLikes}}</span></H3>
-<app-properties-thumbnail
+<app-properties-thumbnail *ngFor="let propertyHolding of propertyHoldings"
   #thumbnailComponent
   (liked)="handleLiked($event)"
   [propertyHolding]="propertyHolding">
