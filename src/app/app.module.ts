@@ -11,6 +11,7 @@ import { OverviewComponent } from './overview/overview.component';
 import { PropertiesThumbnailComponent } from './properties/properties-thumbnail/properties-thumbnail.component';
 import {PropertiesListComponent} from "./properties/properties-list/properties-list.component";
 import {MatCardModule} from "@angular/material";
+import { HeaderComponent } from './header/header.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import {MatCardModule} from "@angular/material";
     ClientsComponent,
     OverviewComponent,
     PropertiesListComponent,
-    PropertiesThumbnailComponent
+    PropertiesThumbnailComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
