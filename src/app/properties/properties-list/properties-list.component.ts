@@ -14,7 +14,7 @@ export class PropertiesListComponent implements OnInit {
   handleLiked(data) {
     this.totalPropertyLikes++;
     console.log('total property likes: ', this.totalPropertyLikes);
-    console.log('Proprty liked ',data);
+    console.log('Property liked ',data);
   }
 
   constructor(private propertiesService: PropertiesService) { }

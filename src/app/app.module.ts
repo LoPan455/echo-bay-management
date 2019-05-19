@@ -7,9 +7,10 @@ import { AppComponent } from './app.component';
 import { AngularMaterialModule } from "./angular-material/angular-material.module";
 import { UsersComponent } from './users/users.component';
 import { ClientsComponent } from './clients/clients.component';
-import { PropertiesComponent } from './properties/properties.component';
 import { OverviewComponent } from './overview/overview.component';
 import { PropertiesThumbnailComponent } from './properties/properties-thumbnail/properties-thumbnail.component';
+import {PropertiesListComponent} from "./properties/properties-list/properties-list.component";
+import {MatCardModule} from "@angular/material";
 
 
 @NgModule({
@@ -17,15 +18,16 @@ import { PropertiesThumbnailComponent } from './properties/properties-thumbnail/
     AppComponent,
     UsersComponent,
     ClientsComponent,
-    PropertiesComponent,
     OverviewComponent,
+    PropertiesListComponent,
     PropertiesThumbnailComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FlexLayoutModule,
-    AngularMaterialModule
+    AngularMaterialModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
