@@ -1,0 +1,26 @@
+import { Component, OnInit } from '@angular/core';
+import { PropertiesService } from '../shared/properties.service';
+
+@Component({
+  selector: 'app-properties-list',
+  templateUrl: './properties-list.component.html',
+  styleUrls: ['./properties-list.component.sass']
+})
+export class PropertiesListComponent implements OnInit {
+
+  totalPropertyLikes:number = 0;
+  propertyHolding:any;
+
+  handleLiked(data) {
+    this.totalPropertyLikes++;
+    console.log('total property likes: ', this.totalPropertyLikes);
+    console.log('Proprty liked ',data);
+  }
+
+  constructor(private propertiesService: PropertiesService) { }
+
+  ngOnInit() {
+    this.propertyHolding = this.propertiesService.getProperties()
+  }
+
+}
