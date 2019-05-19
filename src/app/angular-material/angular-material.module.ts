@@ -1,8 +1,10 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import {MatButtonModule, MatCheckboxModule } from '@angular/material';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {MatCheckboxModule} from '@angular/material';
 import {MatToolbarModule} from '@angular/material/toolbar';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatCardModule} from '@angular/material/card';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [],
@@ -11,14 +13,17 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatCheckboxModule,
     MatButtonModule,
     MatToolbarModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatCardModule
   ],
   exports: [
     CommonModule,
     MatCheckboxModule,
     MatButtonModule,
     MatToolbarModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatCardModule
   ]
 })
-export class AngularMaterialModule { }
+export class AngularMaterialModule {
+}
