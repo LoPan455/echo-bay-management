@@ -13,6 +13,7 @@ import {PropertiesListComponent} from "./properties/properties-list/properties-l
 import {MatCardModule} from "@angular/material";
 import { HeaderComponent } from './header/header.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
+import { PropertiesDetailComponent } from './properties/properties-detail/properties-detail.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { SideNavComponent } from './side-nav/side-nav.component';
     PropertiesListComponent,
     PropertiesThumbnailComponent,
     HeaderComponent,
-    SideNavComponent
+    SideNavComponent,
+    PropertiesDetailComponent
   ],
   imports: [
     BrowserModule,
