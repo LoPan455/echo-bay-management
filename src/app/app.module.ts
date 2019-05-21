@@ -12,7 +12,7 @@ import { PropertiesThumbnailComponent } from './properties/properties-thumbnail/
 import {PropertiesListComponent} from "./properties/properties-list/properties-list.component";
 import { HeaderComponent } from './header/header.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
-import {MatListModule} from "@angular/material";
+import { PropertiesDetailComponent } from './properties/properties-detail/properties-detail.component';
 
 
 @NgModule({
@@ -24,7 +24,8 @@ import {MatListModule} from "@angular/material";
     PropertiesListComponent,
     PropertiesThumbnailComponent,
     HeaderComponent,
-    SideNavComponent
+    SideNavComponent,
+    PropertiesDetailComponent
   ],
   imports: [
     BrowserModule,
