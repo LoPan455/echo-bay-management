@@ -4,6 +4,7 @@ import {UsersComponent} from "./users/users.component";
 import {ClientsComponent} from "./clients/clients.component";
 import {OverviewComponent} from "./overview/overview.component";
 import {PropertiesListComponent} from "./properties/properties-list/properties-list.component";
+import {AppComponent} from "./app.component";
 
 const routes: Routes = [
   { path: 'users', component: UsersComponent },

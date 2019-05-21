@@ -10,9 +10,9 @@ import { ClientsComponent } from './clients/clients.component';
 import { OverviewComponent } from './overview/overview.component';
 import { PropertiesThumbnailComponent } from './properties/properties-thumbnail/properties-thumbnail.component';
 import {PropertiesListComponent} from "./properties/properties-list/properties-list.component";
-import {MatCardModule} from "@angular/material";
 import { HeaderComponent } from './header/header.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
+import {MatListModule} from "@angular/material";
 
 
 @NgModule({
@@ -31,7 +31,7 @@ import { SideNavComponent } from './side-nav/side-nav.component';
     AppRoutingModule,
     FlexLayoutModule,
     AngularMaterialModule,
-    MatCardModule
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
