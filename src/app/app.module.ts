@@ -32,7 +32,6 @@ import { PropertiesDetailComponent } from './properties/properties-detail/proper
     AppRoutingModule,
     FlexLayoutModule,
     AngularMaterialModule,
-    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
