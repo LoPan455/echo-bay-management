@@ -3,7 +3,7 @@ import {Injectable} from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class PropertiesService {
+export class PropertiesDataService {
 
   getProperties() {
     return PROPERTY_HOLDINGS;

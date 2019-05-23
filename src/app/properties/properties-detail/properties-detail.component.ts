@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {PropertiesService} from "../shared/properties.service";
+import {PropertiesDataService} from "../shared/properties-data.service";
 
 @Component({
   selector: 'app-properties-detail',
@@ -10,7 +10,7 @@ export class PropertiesDetailComponent implements OnInit {
 
   propertyHolding:any;
 
-  constructor(private propertiesService:PropertiesService) { }
+  constructor(private propertiesService:PropertiesDataService) { }
 
   ngOnInit() {
     this.propertyHolding = this.propertiesService.getEvent(1);

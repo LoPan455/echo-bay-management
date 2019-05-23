@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PropertiesService } from '../shared/properties.service';
+import { PropertiesDataService } from '../shared/properties-data.service';
 
 @Component({
   selector: 'app-properties-list',
@@ -17,7 +17,7 @@ export class PropertiesListComponent implements OnInit {
     console.log('Property liked ',data);
   }
 
-  constructor(private propertiesService: PropertiesService) { }
+  constructor(private propertiesService: PropertiesDataService) { }
 
   ngOnInit() {
     this.propertyHoldings = this.propertiesService.getProperties()

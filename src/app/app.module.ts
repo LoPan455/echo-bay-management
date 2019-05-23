@@ -13,6 +13,9 @@ import {PropertiesListComponent} from "./properties/properties-list/properties-l
 import { HeaderComponent } from './header/header.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
 import { PropertiesDetailComponent } from './properties/properties-detail/properties-detail.component';
+import { ClientsListComponent } from './clients/clients-list/clients-list.component';
+import { ClientsThumbnailComponent } from './clients/clients-thumbnail/clients-thumbnail.component';
+import { ClientsDetailComponent } from './clients/clients-detail/clients-detail.component';
 
 
 @NgModule({
@@ -25,7 +28,10 @@ import { PropertiesDetailComponent } from './properties/properties-detail/proper
     PropertiesThumbnailComponent,
     HeaderComponent,
     SideNavComponent,
-    PropertiesDetailComponent
+    PropertiesDetailComponent,
+    ClientsListComponent,
+    ClientsThumbnailComponent,
+    ClientsDetailComponent
   ],
   imports: [
     BrowserModule,
