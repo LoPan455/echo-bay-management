@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { PropertiesService } from '../shared/properties.service';
-import {Router} from '@angular/router';
+import {Component, OnInit} from '@angular/core';
+import {PropertiesService} from '../shared/properties.service';
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-properties-list',
@@ -9,13 +9,13 @@ import {Router} from '@angular/router';
 })
 export class PropertiesListComponent implements OnInit {
 
-  totalPropertyLikes:number = 0;
-  propertyHoldings:any;
+  totalPropertyLikes: number = 0;
+  propertyHoldings: any;
 
   handleLiked(data) {
     this.totalPropertyLikes++;
     console.log('total property likes: ', this.totalPropertyLikes);
-    console.log('Property liked ',data);
+    console.log('Property liked ', data);
   }
 
   addProperty() {
@@ -24,10 +24,12 @@ export class PropertiesListComponent implements OnInit {
 
   constructor(
     private propertiesService: PropertiesService,
-    private router: Router) { }
+    private router: Router,
+    private route: ActivatedRoute) {
+  }
 
   ngOnInit() {
-    this.propertyHoldings = this.propertiesService.getProperties()
+    this.propertyHoldings = this.route.snapshot.data['propertyHoldings'];
   }
 
 }

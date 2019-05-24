@@ -1,4 +1,5 @@
 import {Injectable} from '@angular/core';
+import {Subject} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -6,10 +7,12 @@ import {Injectable} from '@angular/core';
 export class PropertiesService {
 
   getProperties() {
-    return PROPERTY_HOLDINGS;
+    let subject = new Subject();
+    setTimeout(() => {subject.next(PROPERTY_HOLDINGS);subject.complete()}, 100);
+    return subject;
   }
 
-  getEvent(id:number) {
+  getEvent(id: number) {
     return PROPERTY_HOLDINGS.find(propertyHolding => propertyHolding.id === id)
   }
 
