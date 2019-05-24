@@ -2,6 +2,7 @@
 <H3>Liked Properties: <span>{{totalPropertyLikes}}</span></H3>
 <app-properties-thumbnail *ngFor="let propertyHolding of propertyHoldings"
   #thumbnailComponent
+  class="property-thumbnail-card"
   (liked)="handleLiked($event)"
   [propertyHolding]="propertyHolding">
 </app-properties-thumbnail>

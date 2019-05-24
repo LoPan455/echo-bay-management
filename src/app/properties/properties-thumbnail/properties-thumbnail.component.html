@@ -1,7 +1,9 @@
 <mat-card>
   <mat-card-header>
     <mat-card-title-group>
-      <mat-card-title>{{propertyHolding.name}}</mat-card-title>
+      <mat-card-title [routerLink]="['/properties', propertyHolding.id]">
+        {{propertyHolding.name}}
+      </mat-card-title>
       <mat-card-subtitle>{{propertyHolding.address.city}}</mat-card-subtitle>
     </mat-card-title-group>
   </mat-card-header>
