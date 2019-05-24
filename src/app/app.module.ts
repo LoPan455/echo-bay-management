@@ -13,6 +13,8 @@ import {PropertiesListComponent} from "./properties/properties-list/properties-l
 import { HeaderComponent } from './header/header.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
 import { PropertiesDetailComponent } from './properties/properties-detail/properties-detail.component';
+import { CreatePropertyComponent } from './properties/create-property/create-property.component';
+import { NotFoundComponent } from './errors/not-found/not-found.component';
 
 
 @NgModule({
@@ -25,7 +27,9 @@ import { PropertiesDetailComponent } from './properties/properties-detail/proper
     PropertiesThumbnailComponent,
     HeaderComponent,
     SideNavComponent,
-    PropertiesDetailComponent
+    PropertiesDetailComponent,
+    CreatePropertyComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,

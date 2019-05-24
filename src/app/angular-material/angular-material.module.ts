@@ -13,6 +13,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     MatCardModule,
     MatSidenavModule,
     MatDividerModule,
-    MatListModule
+    MatListModule,
+    MatFormFieldModule
   ],
   exports: [
     CommonModule,
@@ -37,7 +39,8 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     MatCardModule,
     MatSidenavModule,
     MatDividerModule,
-    MatListModule
+    MatListModule,
+    MatFormFieldModule
   ]
 })
 export class AngularMaterialModule {

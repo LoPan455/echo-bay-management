@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PropertiesService } from '../shared/properties.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-properties-list',
@@ -17,7 +18,13 @@ export class PropertiesListComponent implements OnInit {
     console.log('Property liked ',data);
   }
 
-  constructor(private propertiesService: PropertiesService) { }
+  addProperty() {
+    this.router.navigate(['/properties/new'])
+  }
+
+  constructor(
+    private propertiesService: PropertiesService,
+    private router: Router) { }
 
   ngOnInit() {
     this.propertyHoldings = this.propertiesService.getProperties()

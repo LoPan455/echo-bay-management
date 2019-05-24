@@ -1,4 +1,7 @@
+<section fxLayout="">
 <H2>Properties:</H2>
+  <button mat-button (click)="addProperty()">Add Property</button>
+</section>
 <H3>Liked Properties: <span>{{totalPropertyLikes}}</span></H3>
 <app-properties-thumbnail *ngFor="let propertyHolding of propertyHoldings"
   #thumbnailComponent
