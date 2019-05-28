@@ -8,14 +8,16 @@ import {AngularMaterialModule} from "./angular-material/angular-material.module"
 import {UsersComponent} from './users/users.component';
 import {ClientsComponent} from './clients/clients.component';
 import {OverviewComponent} from './overview/overview.component';
-import {PropertiesThumbnailComponent} from './properties/properties-thumbnail/properties-thumbnail.component';
-import {PropertiesListComponent} from "./properties/properties-list/properties-list.component";
 import {HeaderComponent} from './header/header.component';
 import {SideNavComponent} from './side-nav/side-nav.component';
-import {PropertiesDetailComponent} from './properties/properties-detail/properties-detail.component';
-import {CreatePropertyComponent} from './properties/create-property/create-property.component';
 import {NotFoundComponent} from './errors/not-found/not-found.component';
-import {PropertiesListResolverService} from './properties/properties-list-resolver.service';
+import {
+  PropertiesThumbnailComponent,
+  PropertiesListComponent,
+  PropertiesDetailComponent,
+  PropertiesListResolverService,
+  CreatePropertyComponent
+} from './properties/index';
 
 
 @NgModule({
