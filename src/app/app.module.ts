@@ -5,12 +5,12 @@ import {FlexLayoutModule} from '@angular/flex-layout';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {AngularMaterialModule} from "./angular-material/angular-material.module";
-import {UsersComponent} from './users/users.component';
-import {ClientsComponent} from './clients/clients.component';
-import {OverviewComponent} from './overview/overview.component';
-import {HeaderComponent} from './header/header.component';
+import {UsersComponent} from './users/index';
+import {ClientsComponent} from './clients/index';
+import {OverviewComponent} from './overview/index';
+import {HeaderComponent} from './header/index';
 import {SideNavComponent} from './side-nav/side-nav.component';
-import {NotFoundComponent} from './errors/not-found/not-found.component';
+import {NotFoundComponent} from './errors/index';
 import {
   PropertiesThumbnailComponent,
   PropertiesListComponent,
