@@ -1,9 +1,9 @@
-export interface IPropertiesModel {
+export interface IProperty {
 
   id: number
   name: string
   address: IAddress
-  market_value: bigint
+  market_value: number
   tenant: string
   likes: number
   details: string
