@@ -5,7 +5,7 @@ import {FlexLayoutModule} from '@angular/flex-layout';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {AngularMaterialModule} from "./angular-material/angular-material.module";
-import {UsersComponent} from './users/index';
+import {UsersModule} from './users/index';
 import {ClientsComponent} from './clients/index';
 import {OverviewComponent} from './overview/index';
 import {HeaderComponent} from './header/index';
@@ -23,7 +23,6 @@ import {
 @NgModule({
   declarations: [
     AppComponent,
-    UsersComponent,
     ClientsComponent,
     OverviewComponent,
     PropertiesListComponent,
@@ -39,6 +38,7 @@ import {
     AppRoutingModule,
     FlexLayoutModule,
     AngularMaterialModule,
+    UsersModule,
   ],
   providers: [
     PropertiesListResolverService

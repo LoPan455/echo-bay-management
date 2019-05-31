@@ -1,6 +1,5 @@
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
-import {UsersComponent} from "./users/users.component";
 import {ClientsComponent} from "./clients/clients.component";
 import {OverviewComponent} from "./overview/overview.component";
 import {PropertiesListComponent} from "./properties/properties-list/properties-list.component";
@@ -8,11 +7,10 @@ import {PropertiesDetailComponent} from './properties/properties-detail/properti
 import {CreatePropertyComponent} from './properties/create-property/create-property.component';
 import {NotFoundComponent} from './errors/not-found/not-found.component';
 import {PropertiesRouteActivatorService} from './properties/properties-route-activator.service';
-import {resolve} from 'q';
 import {PropertiesListResolverService} from './properties/properties-list-resolver.service';
 
 const routes: Routes = [
-  {path: 'users', component: UsersComponent},
+  {path: 'users', loadChildren:'./users/users.module#UsersModule' },
   {path: 'clients', component: ClientsComponent},
   {path: 'properties', component: PropertiesListComponent, resolve: {propertyHoldings:PropertiesListResolverService}},
   {path: 'properties/new', component: CreatePropertyComponent},
@@ -23,7 +21,7 @@ const routes: Routes = [
   },
   {path: 'overview', component: OverviewComponent},
   {path: '404', component: NotFoundComponent},
-  {path: '', redirectTo: '/events', pathMatch: 'full'},
+  {path: '', redirectTo: '/', pathMatch: 'full'},
 ];
 
 @NgModule({

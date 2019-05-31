@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {PropertiesService} from '../shared/properties.service';
 import {ActivatedRoute, Router} from '@angular/router';
+import {IProperty} from "../shared";
 
 @Component({
   selector: 'app-properties-list',
@@ -10,7 +11,7 @@ import {ActivatedRoute, Router} from '@angular/router';
 export class PropertiesListComponent implements OnInit {
 
   totalPropertyLikes: number = 0;
-  propertyHoldings: any;
+  propertyHoldings: IProperty[];
 
   handleLiked(data) {
     this.totalPropertyLikes++;

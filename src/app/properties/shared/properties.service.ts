@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {Subject} from 'rxjs';
+import {Observable, Subject} from 'rxjs';
 import {IProperty, IAddress} from "./properties.model";
 
 @Injectable({
@@ -7,9 +7,9 @@ import {IProperty, IAddress} from "./properties.model";
 })
 export class PropertiesService {
 
-  getProperties() {
-    let subject = new Subject();
-    setTimeout(() => {subject.next(PROPERTY_HOLDINGS);subject.complete()}, 100);
+  getProperties(): Observable<IProperty[]> {
+    let subject = new Subject<IProperty[]>();
+    setTimeout(() => { subject.next(PROPERTY_HOLDINGS);subject.complete(); }, 100);
     return subject;
   }
 

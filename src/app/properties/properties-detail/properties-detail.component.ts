@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {PropertiesService} from "../shared/properties.service";
 import {ActivatedRoute} from '@angular/router';
+import {IProperty} from "../shared";
 
 @Component({
   selector: 'app-properties-detail',
@@ -9,7 +10,7 @@ import {ActivatedRoute} from '@angular/router';
 })
 export class PropertiesDetailComponent implements OnInit {
 
-  propertyHolding: any;
+  propertyHolding: IProperty;
 
   constructor(
     private propertiesService: PropertiesService,

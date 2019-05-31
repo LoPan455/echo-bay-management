@@ -1,4 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {IProperty} from "../shared";
 
 @Component({
   selector: 'app-properties-thumbnail',
@@ -7,7 +8,7 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 })
 export class PropertiesThumbnailComponent implements OnInit {
 
-  @Input() propertyHolding: any;
+  @Input() propertyHolding: IProperty;
   @Output() liked = new EventEmitter;
 
   likes:number = 0;
@@ -21,8 +22,6 @@ export class PropertiesThumbnailComponent implements OnInit {
   logFoo(){
     console.log('Foo...');
   }
-
-
 
   constructor() { }
 
