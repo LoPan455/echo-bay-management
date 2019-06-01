@@ -18,7 +18,6 @@ import {UsersComponent} from "./users.component";
   ],
   imports: [
     CommonModule,
-    UsersRoutingModule,
     AngularMaterialModule
   ]
 })

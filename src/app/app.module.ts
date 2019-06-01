@@ -20,6 +20,7 @@ import {
   CreatePropertyComponent
 } from './properties/index';
 import {DealsModule} from './deals/deals.module';
+import {PropertiesModule} from './properties/properties.module';
 
 
 @NgModule({
@@ -41,6 +42,7 @@ import {DealsModule} from './deals/deals.module';
     AngularMaterialModule,
     UsersModule,
     DealsModule,
+    PropertiesModule,
     AppRoutingModule,
   ],
   providers: [

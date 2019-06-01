@@ -1,15 +1,13 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {DealsListComponent} from './deals-list/deals-list.component';
-import {RouterModule} from '@angular/router';
+import { DealsRoutingModule } from './deals-routing.module';
 
 @NgModule({
   declarations: [DealsListComponent],
   imports: [
     CommonModule,
-    RouterModule.forChild([
-      {path: 'deals', component: DealsListComponent}
-    ])
+    DealsRoutingModule
   ]
 })
 export class DealsModule {
