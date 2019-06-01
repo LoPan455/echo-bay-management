@@ -5,7 +5,8 @@ import {FlexLayoutModule} from '@angular/flex-layout';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {AngularMaterialModule} from "./angular-material/angular-material.module";
-import {UsersModule} from './users/index';
+import {UsersModule } from './users/users.module';
+import { UsersRoutingModule} from './users/users-routing.module';
 import {ClientsComponent} from './clients/index';
 import {OverviewComponent} from './overview/index';
 import {HeaderComponent} from './header/index';
@@ -18,6 +19,7 @@ import {
   PropertiesListResolverService,
   CreatePropertyComponent
 } from './properties/index';
+import {DealsModule} from './deals/deals.module';
 
 
 @NgModule({
@@ -35,10 +37,11 @@ import {
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     FlexLayoutModule,
     AngularMaterialModule,
     UsersModule,
+    DealsModule,
+    AppRoutingModule,
   ],
   providers: [
     PropertiesListResolverService

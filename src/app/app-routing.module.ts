@@ -8,9 +8,10 @@ import {CreatePropertyComponent} from './properties/create-property/create-prope
 import {NotFoundComponent} from './errors/not-found/not-found.component';
 import {PropertiesRouteActivatorService} from './properties/properties-route-activator.service';
 import {PropertiesListResolverService} from './properties/properties-list-resolver.service';
+import {DealsModule} from './deals/deals.module';
+import {UsersModule} from './users/users.module';
 
 const routes: Routes = [
-  {path: 'users', loadChildren:'./users/users.module#UsersModule' },
   {path: 'clients', component: ClientsComponent},
   {path: 'properties', component: PropertiesListComponent, resolve: {propertyHoldings:PropertiesListResolverService}},
   {path: 'properties/new', component: CreatePropertyComponent},
@@ -22,10 +23,15 @@ const routes: Routes = [
   {path: 'overview', component: OverviewComponent},
   {path: '404', component: NotFoundComponent},
   {path: '', redirectTo: '/', pathMatch: 'full'},
+  {path: '**', component: NotFoundComponent }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    RouterModule.forRoot(routes),
+    UsersModule,
+    DealsModule
+  ],
   exports: [RouterModule]
 })
 export class AppRoutingModule {

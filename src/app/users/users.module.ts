@@ -9,8 +9,11 @@ import {UsersComponent} from "./users.component";
 
 @NgModule({
   declarations: [
+    UsersComponent,
     ProfileComponent,
     LoginComponent,
+  ],
+  exports: [
     UsersComponent
   ],
   imports: [
