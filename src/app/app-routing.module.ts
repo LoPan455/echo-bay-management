@@ -8,11 +8,10 @@ import {ClientsModule} from './clients/clients.module';
 import {PropertiesModule} from './properties/properties.module';
 
 const routes: Routes = [
-
   {path: 'overview', component: OverviewComponent},
   {path: '404', component: NotFoundComponent},
   {path: '', redirectTo: '/overview', pathMatch: 'full'},
-  {path: '**', component: NotFoundComponent }
+  {path: '**', component: NotFoundComponent}
 ];
 
 @NgModule({
