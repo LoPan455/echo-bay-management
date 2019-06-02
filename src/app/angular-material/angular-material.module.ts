@@ -7,7 +7,12 @@ import {CdkTableModule} from '@angular/cdk/table';
 import {CdkTreeModule} from '@angular/cdk/tree';
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {MatCheckboxModule, MatDividerModule, MatListModule} from '@angular/material';
+import {
+  MatCheckboxModule,
+  MatDividerModule,
+  MatInputModule,
+  MatListModule
+} from '@angular/material';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatCardModule} from '@angular/material/card';
@@ -28,7 +33,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     MatSidenavModule,
     MatDividerModule,
     MatListModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatInputModule
   ],
   exports: [
     CommonModule,

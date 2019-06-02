@@ -10,10 +10,11 @@ export class LoginComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    console.log('started....');
   }
 
-  login() {
-    console.log('Logged in')
+  login(formValues) {
+    console.log('soemthing', formValues);
   }
 
 }
