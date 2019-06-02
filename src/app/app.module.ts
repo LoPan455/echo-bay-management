@@ -1,13 +1,10 @@
-import {BrowserModule} from '@angular/platform-browser';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NgModule} from '@angular/core';
 import {FlexLayoutModule} from '@angular/flex-layout';
-
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
-import {AngularMaterialModule} from "./angular-material/angular-material.module";
-import {UsersModule } from './users/users.module';
-import { UsersRoutingModule} from './users/users-routing.module';
-import {ClientsComponent} from './clients/index';
+import {AngularMaterialModule} from "./shared/angular-material/angular-material.module";
+import {ClientsComponent} from './clients/clients.component';
 import {OverviewComponent} from './overview/index';
 import {HeaderComponent} from './header/index';
 import {SideNavComponent} from './side-nav/side-nav.component';
@@ -19,9 +16,9 @@ import {
   PropertiesListResolverService,
   CreatePropertyComponent
 } from './properties/index';
-import {DealsModule} from './deals/deals.module';
 import {PropertiesModule} from './properties/properties.module';
-
+import {AuthenticationService} from './users/shared/authentication.service';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -34,19 +31,19 @@ import {PropertiesModule} from './properties/properties.module';
     SideNavComponent,
     PropertiesDetailComponent,
     CreatePropertyComponent,
-    NotFoundComponent,
+    NotFoundComponent
   ],
   imports: [
-    BrowserModule,
     FlexLayoutModule,
+    BrowserAnimationsModule,
     AngularMaterialModule,
-    UsersModule,
-    DealsModule,
+    FormsModule,
     PropertiesModule,
     AppRoutingModule,
   ],
   providers: [
-    PropertiesListResolverService
+    PropertiesListResolverService,
+    AuthenticationService
   ],
   bootstrap: [AppComponent]
 })

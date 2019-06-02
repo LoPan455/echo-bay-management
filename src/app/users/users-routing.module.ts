@@ -2,10 +2,9 @@ import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {ProfileComponent} from "./profile/profile.component";
 import {LoginComponent} from "./login/login.component";
-import {UsersComponent} from "./users.component";
 
 const usersRoutes: Routes = [
-  {path: 'users', component: UsersComponent},
+  {path: '', component: ProfileComponent},
   {path: 'profile', component: ProfileComponent},
   {path: 'login', component: LoginComponent}
 ];
