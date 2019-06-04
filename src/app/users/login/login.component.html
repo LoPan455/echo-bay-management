@@ -22,7 +22,7 @@
                   type="password">
       </mat-form-field>
       <mat-card-actions>
-        <button type="submit" mat-button mat-raised-button>Submit</button>
+        <button [disabled]="loginForm.invalid" type="submit" mat-button mat-raised-button>Submit</button>
       </mat-card-actions>
     </form>
   </mat-card-content>

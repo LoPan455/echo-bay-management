@@ -1,6 +1,8 @@
 <mat-toolbar color="primary">
-  <!-- This fills the remaining space of the current row -->
-  <span class="example-fill-remaining-space"></span>
-  <span class="logged-in-user">Welcome, Thomas Johander</span>
   <span>Echo Bay Management</span>
+  <span class="example-fill-remaining-space"></span>
+  <a *ngIf="!authService.isLoggedIn()" logged-in-user [routerLink]="['users/login']">Login</a>
+  <a *ngIf="authService.isLoggedIn()" class="logged-in-user" [routerLink]="['users/profile']">Welcome, {{authService.currentUser.firstName}}</a>
+  <mat-divider style="color: #000;" [vertical]="true"></mat-divider>
+  <a *ngIf="authService.isLoggedIn()" class="logged-in-user" (click)="logoutService.logout()">Logout</a>
 </mat-toolbar>

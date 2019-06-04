@@ -7,19 +7,21 @@ import {LoginComponent} from "./login/login.component";
 import {UsersComponent} from "./users.component";
 import {MatInputModule} from '@angular/material';
 import {UsersRoutingModule} from './users-routing.module';
+import {FlexModule} from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
     UsersComponent,
     ProfileComponent,
-    LoginComponent
+    LoginComponent,
   ],
   imports: [
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
     AngularMaterialModule,
-    UsersRoutingModule
+    UsersRoutingModule,
+    FlexModule
   ],
 })
 export class UsersModule {

@@ -25,11 +25,8 @@ import {FormsModule} from '@angular/forms';
     AppComponent,
     ClientsComponent,
     OverviewComponent,
-    PropertiesListComponent,
-    PropertiesThumbnailComponent,
     HeaderComponent,
     SideNavComponent,
-    PropertiesDetailComponent,
     CreatePropertyComponent,
     NotFoundComponent
   ],
@@ -38,11 +35,9 @@ import {FormsModule} from '@angular/forms';
     BrowserAnimationsModule,
     AngularMaterialModule,
     FormsModule,
-    PropertiesModule,
     AppRoutingModule,
   ],
   providers: [
-    PropertiesListResolverService,
     AuthenticationService
   ],
   bootstrap: [AppComponent]
