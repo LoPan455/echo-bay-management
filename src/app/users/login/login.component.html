@@ -3,26 +3,31 @@
     <mat-card-title>Login</mat-card-title>
   </mat-card-header>
   <mat-card-content>
-    <form #loginForm='ngForm' (ngSubmit)="login(loginForm.value)" class="example-form">
-      <mat-form-field class="example-full-width">
-        <input (ngModel)="userName"
-                  type="text"
-                  required
-                  placeholder="Username"
-                  name='userName'
-                  matInput
-                  placeholder="Username">
-      </mat-form-field>
-      <mat-form-field class="example-full-width" >
-        <input (ngModel)="password"
-                  required
-                  name='password'
-                  matInput
-                  placeholder="Password"
-                  type="password">
-      </mat-form-field>
+    <form #loginForm='ngForm' (ngSubmit)="login(loginForm.value)" class="example-form" novalidate>
+      <div fxLayout="column">
+        <mat-form-field class="example-full-width">
+          <input (ngModel)="userName"
+                 type="text"
+                 required
+                 name='userName'
+                 matInput
+                 placeholder="Username">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <input (ngModel)="password"
+                 required
+                 name='password'
+                 matInput
+                 placeholder="Password"
+                 type="password">
+        </mat-form-field>
+      </div>
       <mat-card-actions>
-        <button [disabled]="loginForm.invalid" type="submit" mat-button mat-raised-button>Submit</button>
+        <button [disabled]="loginForm.invalid"
+                type="submit"
+                mat-button
+                mat-raised-button>Submit
+        </button>
       </mat-card-actions>
     </form>
   </mat-card-content>
