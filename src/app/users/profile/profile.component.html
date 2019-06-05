@@ -8,3 +8,26 @@
     <p>User Id: {{this.user.id}}</p>
   </mat-card-content>
 </mat-card>
+<mat-card>
+  <form [formGroup]="profileForm" #profileForm autocomplete="off" novalidate>
+    <div class="example-container"  fxLayout="column">
+      <mat-form-field>
+        <input
+          matInput
+          placeholder="First Name"
+          formControlName="firstName"
+        >
+      </mat-form-field>
+      <mat-form-field>
+        <input
+          matInput
+          placeholder="Last Name"
+          formControlName="lastName"
+        >
+      </mat-form-field>
+    </div>
+    <button type="submit" mat-button>Save</button>
+    <button type="button" mat-button>Cancel</button>
+  </form>
+</mat-card>
+

@@ -5,7 +5,6 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {ProfileComponent} from './profile/profile.component';
 import {LoginComponent} from "./login/login.component";
 import {UsersComponent} from "./users.component";
-import {MatInputModule} from '@angular/material';
 import {UsersRoutingModule} from './users-routing.module';
 import {FlexModule} from '@angular/flex-layout';
 

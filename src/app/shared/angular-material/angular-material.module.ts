@@ -11,9 +11,11 @@ import {
   MatCheckboxModule,
   MatDividerModule,
   MatInputModule,
-  MatListModule
+  MatListModule,
+  MatSelectModule
 } from '@angular/material';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatOptionModule} from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
@@ -35,7 +37,9 @@ import {FormsModule} from '@angular/forms';
     MatDividerModule,
     MatListModule,
     MatFormFieldModule,
+    MatSelectModule,
     MatInputModule,
+
     FormsModule
   ],
   exports: [
@@ -49,6 +53,7 @@ import {FormsModule} from '@angular/forms';
     MatDividerModule,
     MatListModule,
     MatFormFieldModule,
+    MatSelectModule,
     MatInputModule,
   ]
 })
