@@ -9,16 +9,11 @@ import {OverviewComponent} from './overview/index';
 import {HeaderComponent} from './header/index';
 import {SideNavComponent} from './side-nav/side-nav.component';
 import {NotFoundComponent} from './errors/index';
-import {
-  PropertiesThumbnailComponent,
-  PropertiesListComponent,
-  PropertiesDetailComponent,
-  PropertiesListResolverService,
-  CreatePropertyComponent
-} from './properties/index';
-import {PropertiesModule} from './properties/properties.module';
 import {AuthenticationService} from './users/shared/authentication.service';
 import {FormsModule} from '@angular/forms';
+import {HttpClientInMemoryWebApiModule} from 'angular-in-memory-web-api';
+import {HttpClientModule} from '@angular/common/http';
+import {InMemPropertiesService} from './properties/shared/in-mem-properties.service';
 
 @NgModule({
   declarations: [
@@ -27,7 +22,6 @@ import {FormsModule} from '@angular/forms';
     OverviewComponent,
     HeaderComponent,
     SideNavComponent,
-    CreatePropertyComponent,
     NotFoundComponent
   ],
   imports: [
@@ -35,6 +29,7 @@ import {FormsModule} from '@angular/forms';
     BrowserAnimationsModule,
     AngularMaterialModule,
     FormsModule,
+    HttpClientModule,
     AppRoutingModule,
   ],
   providers: [
