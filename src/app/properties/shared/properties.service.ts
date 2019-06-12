@@ -1,11 +1,15 @@
 import {Injectable} from '@angular/core';
 import {Observable, Subject} from 'rxjs';
 import {IProperty, IAddress} from "./properties.model";
+import {map} from 'rxjs/operators';
+import {HttpClient} from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PropertiesService {
+  propertiesEndpoint = 'properties';
+  base_url = 'http://fakebakend.com/api/';
 
   getProperties(): Observable<IProperty[]> {
     let subject = new Subject<IProperty[]>();
@@ -17,7 +21,11 @@ export class PropertiesService {
     return PROPERTY_HOLDINGS.find(propertyHolding => propertyHolding.id === id)
   }
 
-  constructor() {
+  getInMemProperties(): Observable<any> | Promise<any> | any {
+    return this.http.get(this.base_url + this.propertiesEndpoint).pipe(map(properties => properties));
+  }
+
+  constructor(private http: HttpClient) {
   }
 }
 

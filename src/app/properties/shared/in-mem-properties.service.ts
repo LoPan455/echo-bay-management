@@ -55,6 +55,21 @@ export class InMemPropertiesService implements InMemoryDbService {
         tenant: "Scott Smith Ventures, LLC",
         likes: 0,
         details: "Aenean auctor molestie nulla, eget posuere risus tincidunt convallis. Quisque aliquam ac nunc eu rutrum. Praesent commodo elit nisi. Etiam elementum eleifend risus, in ullamcorper ligula bibendum vel. Aliquam scelerisque hendrerit pulvinar. Donec eu neque sit amet enim posuere placerat. Maecenas faucibus venenatis neque non rhoncus. Nulla sagittis ut odio eget feugiat. Quisque laoreet, nunc in malesuada dapibus, sapien mauris venenatis erat, pretium ullamcorper risus purus ac diam. Nullam a justo ac orci imperdiet sagittis. Curabitur eget finibus sapien."
+      },
+      {
+        id: 4,
+        name: "Tech School",
+        address: {
+          street_address: "1600 Highway 7",
+          street_address_2: "",
+          city: "Edina",
+          state: "Minnesota",
+          zipcode: "55408"
+        },
+        market_value: 2345000,
+        tenant: "Echo Bay Ventures, LLC",
+        likes: 0,
+        details: "Aenean auctor molestie nulla, eget posuere risus tincidunt convallis. Quisque aliquam ac nunc eu rutrum. Praesent commodo elit nisi. Etiam elementum eleifend risus, in ullamcorper ligula bibendum vel. Aliquam scelerisque hendrerit pulvinar. Donec eu neque sit amet enim posuere placerat. Maecenas faucibus venenatis neque non rhoncus. Nulla sagittis ut odio eget feugiat. Quisque laoreet, nunc in malesuada dapibus, sapien mauris venenatis erat, pretium ullamcorper risus purus ac diam. Nullam a justo ac orci imperdiet sagittis. Curabitur eget finibus sapien."
       }
     ];
 

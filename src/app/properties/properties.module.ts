@@ -11,6 +11,8 @@ import {CreatePropertyComponent} from './create-property/create-property.compone
 import {HttpClientModule} from '@angular/common/http';
 import {HttpClientInMemoryWebApiModule} from 'angular-in-memory-web-api';
 import {InMemPropertiesService} from './shared/in-mem-properties.service';
+import { PropertyTableComponent } from './property-table/property-table.component';
+import { MatTableModule, MatPaginatorModule, MatSortModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -18,13 +20,17 @@ import {InMemPropertiesService} from './shared/in-mem-properties.service';
     PropertiesThumbnailComponent,
     PropertiesDetailComponent,
     CreatePropertyComponent,
+    PropertyTableComponent,
   ],
   imports: [
     CommonModule,
     AngularMaterialModule,
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(InMemPropertiesService),
-    PropertiesRoutingModule
+    PropertiesRoutingModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
   providers: [
     PropertiesListResolverService,
