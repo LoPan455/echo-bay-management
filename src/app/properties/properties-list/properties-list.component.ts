@@ -30,7 +30,7 @@ export class PropertiesListComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.propertyHoldings = this.route.snapshot.data['propertyHoldings'];
+    this.propertiesService.getProperties().subscribe(response => this.propertyHoldings = response);
   }
 
 }

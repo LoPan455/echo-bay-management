@@ -31,6 +31,7 @@ import {InMemPropertiesService} from './properties/shared/in-mem-properties.serv
     FormsModule,
     HttpClientModule,
     AppRoutingModule,
+    HttpClientInMemoryWebApiModule.forRoot(InMemPropertiesService),
   ],
   providers: [
     AuthenticationService

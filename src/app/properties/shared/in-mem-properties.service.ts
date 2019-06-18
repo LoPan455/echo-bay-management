@@ -9,7 +9,7 @@ import {delay} from 'rxjs/operators';
 })
 export class InMemPropertiesService implements InMemoryDbService {
 
-  createDb(reqInfo?: RequestInfo): {} | Observable<{}> | Promise<{}> {
+  createDb() {
     const properties = [
       {
         id: 1,
@@ -73,27 +73,9 @@ export class InMemPropertiesService implements InMemoryDbService {
       }
     ];
 
-    let returnType = 'observable';
+    return { properties }
 
-    if (reqInfo) {
-      const body = reqInfo.utils.getJsonBody(reqInfo.req) || {};
-      if (body.clear === true) {
-        properties.length = 0;
-      }
-      returnType = body.returnType || 'object';
-    }
-    const db = {properties};
 
-    switch (returnType) {
-      case ('observable'):
-        return of(db).pipe(delay(10));
-      case ('promise'):
-        return new Promise(resolve => {
-          setTimeout(() => resolve(db), 10);
-        });
-      default:
-        return db;
-    }
   }
 
   constructor() {

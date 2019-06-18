@@ -9,6 +9,7 @@ import {PropertiesService} from '../shared';
   styleUrls: ['./property-table.component.css']
 })
 export class PropertyTableComponent implements AfterViewInit {
+
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
   dataSource: PropertyTableDataSource;
@@ -18,7 +19,6 @@ export class PropertyTableComponent implements AfterViewInit {
 
   constructor(private propertiesService: PropertiesService) {
   }
-
 
   ngAfterViewInit() {
     this.dataSource = new PropertyTableDataSource(

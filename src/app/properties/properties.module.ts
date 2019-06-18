@@ -26,11 +26,10 @@ import { MatTableModule, MatPaginatorModule, MatSortModule } from '@angular/mate
     CommonModule,
     AngularMaterialModule,
     HttpClientModule,
-    HttpClientInMemoryWebApiModule.forRoot(InMemPropertiesService),
     PropertiesRoutingModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
   ],
   providers: [
     PropertiesListResolverService,
