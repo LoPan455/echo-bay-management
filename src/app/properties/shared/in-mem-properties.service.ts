@@ -70,6 +70,21 @@ export class InMemPropertiesService implements InMemoryDbService {
         tenant: "Echo Bay Ventures, LLC",
         likes: 0,
         details: "Aenean auctor molestie nulla, eget posuere risus tincidunt convallis. Quisque aliquam ac nunc eu rutrum. Praesent commodo elit nisi. Etiam elementum eleifend risus, in ullamcorper ligula bibendum vel. Aliquam scelerisque hendrerit pulvinar. Donec eu neque sit amet enim posuere placerat. Maecenas faucibus venenatis neque non rhoncus. Nulla sagittis ut odio eget feugiat. Quisque laoreet, nunc in malesuada dapibus, sapien mauris venenatis erat, pretium ullamcorper risus purus ac diam. Nullam a justo ac orci imperdiet sagittis. Curabitur eget finibus sapien."
+      },
+      {
+        id: 5,
+        name: "Janitor School",
+        address: {
+          street_address: "123 Elm Street",
+          street_address_2: "",
+          city: "Rochester",
+          state: "Minnesota",
+          zipcode: "55331"
+        },
+        market_value: 678654785,
+        tenant: "Alphabet, LLC",
+        likes: 0,
+        details: "Aenean auctor molestie nulla, eget posuere risus tincidunt convallis. Quisque aliquam ac nunc eu rutrum. Praesent commodo elit nisi. Etiam elementum eleifend risus, in ullamcorper ligula bibendum vel. Aliquam scelerisque hendrerit pulvinar. Donec eu neque sit amet enim posuere placerat. Maecenas faucibus venenatis neque non rhoncus. Nulla sagittis ut odio eget feugiat. Quisque laoreet, nunc in malesuada dapibus, sapien mauris venenatis erat, pretium ullamcorper risus purus ac diam. Nullam a justo ac orci imperdiet sagittis. Curabitur eget finibus sapien."
       }
     ];
 
